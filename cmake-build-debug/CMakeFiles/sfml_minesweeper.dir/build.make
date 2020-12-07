@@ -99,6 +99,10 @@ sfml_minesweeper_EXTERNAL_OBJECTS =
 
 sfml_minesweeper: CMakeFiles/sfml_minesweeper.dir/main.cpp.o
 sfml_minesweeper: CMakeFiles/sfml_minesweeper.dir/build.make
+sfml_minesweeper: /usr/lib/libsfml-audio.so.2.5.1
+sfml_minesweeper: /usr/lib/libsfml-graphics.so.2.5.1
+sfml_minesweeper: /usr/lib/libsfml-window.so.2.5.1
+sfml_minesweeper: /usr/lib/libsfml-system.so.2.5.1
 sfml_minesweeper: CMakeFiles/sfml_minesweeper.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/furknn/CLionProjects/sfml-minesweeper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable sfml_minesweeper"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sfml_minesweeper.dir/link.txt --verbose=$(VERBOSE)
