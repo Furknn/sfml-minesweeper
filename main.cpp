@@ -41,14 +41,22 @@ int main() {
 
     while (app.isOpen()){
         Event e;
+
+        Vector2i pos=Mouse::getPosition(app);
+        int x=pos.x/w;
+        int y=pos.y/w;
         while (app.pollEvent(e)){
             if (e.type==Event::Closed)
                 app.close();
+            if(e.type==Event::MouseButtonPressed){
+                if(e.key.code==Mouse::Left) sgrid[x][y]=grid[x][y];
+                else if (e.key.code==Mouse::Right) sgrid[x][y]=11;
+            }
         }
         app.clear(Color::White);
         for (int i = 1; i <=10; i++)
             for (int j=1;j<=10;j++){
-                sgrid[i][j]=grid[i][j];
+                if (sgrid[x][y]==9) sgrid[i][j]=grid[i][j];
                 s.setTextureRect(IntRect(sgrid[i][j]*w,0,w,w));
                 s.setPosition(i*w,j*w);
                 app.draw(s);
